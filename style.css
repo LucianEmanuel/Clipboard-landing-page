@@ -1,0 +1,251 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+:root {
+  /* Colors */
+  --Strong-Cyan: 171, 66%, 44%;
+  --Light-Blue: 233, 100%, 69%;
+  --Dark-Grayish-Blue: 210, 10%, 33%;
+  --Grayish-Blue: 201, 11%, 66%;
+  --white: #fff;
+  /* Font */
+  --ff: "Bai Jamjuree", sans-serif;
+  --fw-400: 400;
+  --fw-600: 600;
+  --fs-txt: 1.125rem;
+  --fs-xxl: 2rem;
+  --fs-xl: 1.7rem;
+  --fs-m: 1.5rem;
+}
+
+body {
+  font-family: var(--ff);
+  font-size: var(--fs-txt);
+  background-color: var(--white);
+  line-height: 1.6;
+  color: hsl(var(--Grayish-Blue));
+}
+
+img,
+svg {
+  width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+h1 {
+  font-size: var(--fs-xxl);
+}
+h2 {
+  font-size: var(--fs-xl);
+}
+h3 {
+  font-size: var(--fs-m);
+}
+
+.strong-txt {
+  color: hsl(var(--Dark-Grayish-Blue));
+  font-weight: var(--fw-600);
+  line-height: 1.1;
+}
+section {
+  width: 90%;
+  max-width: 600px;
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.flex_gap_4 {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+.flex_gap_2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+header {
+  background: url(images/bg-header-mobile.png) no-repeat top center/cover;
+
+  display: flex;
+  justify-content: center;
+}
+header .logo {
+  width: 110px;
+  padding-top: 8rem;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  margin-top: 8rem;
+}
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  border: none;
+  padding-block: 1rem;
+  border-radius: 30px;
+  color: var(--white);
+  font-weight: var(--fw-600);
+}
+.green-btn {
+  background-color: hsl(var(--Strong-Cyan));
+  box-shadow: 0px 4px 0 hsl(171, 66%, 35%);
+}
+.green-btn:hover {
+  background-color: hsl(var(--Strong-Cyan), 0.8);
+}
+.blue-btn {
+  background-color: hsl(var(--Light-Blue));
+  box-shadow: 0px 4px 0 hsl(233, 64%, 58%);
+}
+.blue-btn:hover {
+  background-color: hsl(var(--Light-Blue), 0.8);
+}
+
+.keep-track {
+  gap: 2rem;
+}
+
+.margin_top_2rem {
+  margin-top: 2rem;
+}
+.tool img {
+  width: 50px;
+}
+.clipboard .btn-container {
+  width: 100%;
+}
+.sponsors img {
+  width: 176px;
+}
+
+footer {
+  background-color: hsl(var(--Grayish-Blue), 0.2);
+  margin-top: 8rem;
+  padding-block: 4rem;
+}
+footer .logo {
+  width: 50px;
+}
+.nav-items {
+  flex-wrap: wrap;
+}
+.nav-item a {
+  color: hsl(var(--Dark-Grayish-Blue));
+}
+.social-links {
+  display: flex;
+  gap: 2rem;
+}
+svg:hover path {
+  fill: hsl(var(--Strong-Cyan));
+}
+.nav-item:hover a {
+  color: hsl(var(--Strong-Cyan));
+}
+
+@media (min-width: 1000px) {
+  section {
+    max-width: 1200px;
+    margin-inline: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    background: url(images/bg-header-desktop.png) no-repeat top center/cover;
+  }
+  .title,
+  .keep-track {
+    max-width: 600px;
+    margin-inline: auto;
+  }
+  .btn-container {
+    flex-direction: row;
+  }
+  .btn {
+    flex: 1;
+  }
+  .keep-track_method {
+    flex-direction: row;
+    width: 230%;
+    transform: translateX(-50%);
+  }
+  .keep-track_method .img-container {
+    flex: 3;
+  }
+  .keep-track_method .img-container img {
+    justify-self: flex-end;
+  }
+  .keep-track_txt_container {
+    flex: 1;
+    align-items: flex-start;
+  }
+  .text-container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .acces-clipboard h2,
+  .acces-clipboard p {
+    max-width: 600px;
+  }
+  .supercharge-tools {
+    flex-direction: row;
+  }
+  .tool {
+    flex: 1;
+    align-self: flex-start;
+  }
+  .supercharge-txt {
+    gap: 1rem;
+  }
+  .sponsors {
+    flex-direction: row;
+  }
+  .clipboard {
+    max-width: 600px;
+  }
+  .footer {
+    padding-inline: 18%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
