@@ -233,6 +233,7 @@ svg:hover path {
   }
   .sponsors {
     flex-direction: row;
+    justify-content: space-between;
   }
   .clipboard {
     max-width: 600px;
